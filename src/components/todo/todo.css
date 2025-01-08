@@ -1,0 +1,86 @@
+/* Cấu trúc chung cho toàn bộ body để căn giữa */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Chiều cao của viewport */
+    margin: 0;
+    /* Loại bỏ margin mặc định của trình duyệt */
+    background-color: #f0f0f0;
+    /* Màu nền nhẹ cho toàn trang */
+}
+
+/* Cấu trúc chung cho container */
+.todo-container {
+    width: 400px;
+    padding: 20px;
+    background-color: #f4f7fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Tiêu đề Todo */
+.todo-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Container cho input và button */
+.todo-container>div {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style cho input */
+.todo-container input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 10px;
+    outline: none;
+}
+
+.todo-container input[type="text"]:focus {
+    border-color: #007BFF;
+}
+
+/* Style cho button */
+.todo-container button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.todo-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Container cho các todo items */
+.todo-container div>div {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Nếu bạn muốn style cho các todo items khi hoàn thành */
+.todo-container div>div.completed {
+    text-decoration: line-through;
+    color: #888;
+}
